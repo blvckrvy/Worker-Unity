@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Worker_Unity.MainPage"
+             Title="">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Label
+                Text="Worker Unity"
+                FontSize="24"
+                HorizontalOptions="Center"/>
+
+            <!--username entry-->
+            <Entry
+                x:Name="usernameEntry"
+                Placeholder="Username"
+                Margin="0,20,0,0" />
+
+            <!--password entry-->
+            <Entry
+                x:Name="passwordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                Margin="0,20,0,0" />
+
+            <!--login button-->
+            <Button
+                Text="Login"
+                Clicked="login_btn_Clicked"
+                Margin="0,20,0,0" />
+
+            <!--admin link-->
+            <StackLayout VerticalOptions="End" Margin="0,50,0,0">
+                <Label
+                    Text="Sign up?"
+                    TextColor="ForestGreen"
+                    FontAttributes="Italic"
+                    HorizontalOptions="Start">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="signup_tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                <Label 
+                    Text="Admin?"
+                    TextColor="ForestGreen"
+                    FontAttributes="Italic"
+                    HorizontalOptions="End">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnAdminTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+
+</ContentPage>

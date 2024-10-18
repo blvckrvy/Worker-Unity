@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "976440639092",
+    "project_id": "workerunity-a6111",
+    "storage_bucket": "workerunity-a6111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976440639092:android:d2db4820cdf033e54c1b21",
+        "android_client_info": {
+          "package_name": "com.ITMDA3.workerunity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJiua8wYvhBz9XBnN_8CPuck8UlFJALz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

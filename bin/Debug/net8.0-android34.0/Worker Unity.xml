@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Worker Unity</name>
+    </assembly>
+    <members>
+        <member name="T:Worker_Unity.Views.TaskModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:Worker_Unity.Views.TaskModel.TaskName">
+            <inheritdoc cref="F:Worker_Unity.Views.TaskModel.taskName"/>
+        </member>
+        <member name="P:Worker_Unity.Views.TaskModel.TaskDescription">
+            <inheritdoc cref="F:Worker_Unity.Views.TaskModel.taskDescription"/>
+        </member>
+        <member name="P:Worker_Unity.Views.TaskModel.TaskStatus">
+            <inheritdoc cref="F:Worker_Unity.Views.TaskModel.taskStatus"/>
+        </member>
+        <member name="P:Worker_Unity.Views.TaskModel.StatusColor">
+            <inheritdoc cref="F:Worker_Unity.Views.TaskModel.statusColor"/>
+        </member>
+        <member name="P:Worker_Unity.Views.TaskModel.DueDate">
+            <inheritdoc cref="F:Worker_Unity.Views.TaskModel.dueDate"/>
+        </member>
+        <member name="P:Worker_Unity.Views.TaskModel.CanAccept">
+            <inheritdoc cref="F:Worker_Unity.Views.TaskModel.canAccept"/>
+        </member>
+        <member name="P:Worker_Unity.Views.TaskModel.CanComplete">
+            <inheritdoc cref="F:Worker_Unity.Views.TaskModel.canComplete"/>
+        </member>
+        <member name="T:Worker_Unity.Views.WorkersViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Worker_Unity.Views.WorkersViewModel.Tasks">
+            <inheritdoc cref="F:Worker_Unity.Views.WorkersViewModel.tasks"/>
+        </member>
+        <member name="P:Worker_Unity.Views.WorkersViewModel.HasTasks">
+            <inheritdoc cref="F:Worker_Unity.Views.WorkersViewModel.hasTasks"/>
+        </member>
+        <member name="P:Worker_Unity.Views.WorkersViewModel.NoTasks">
+            <inheritdoc cref="F:Worker_Unity.Views.WorkersViewModel.noTasks"/>
+        </member>
+        <member name="F:Worker_Unity.Views.WorkersViewModel.deleteTaskCommand">
+            <summary>The backing field for <see cref="P:Worker_Unity.Views.WorkersViewModel.DeleteTaskCommand"/>.</summary>
+        </member>
+        <member name="P:Worker_Unity.Views.WorkersViewModel.DeleteTaskCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Worker_Unity.Views.WorkersViewModel.DeleteTask(Worker_Unity.Views.TaskModel)"/>.</summary>
+        </member>
+        <member name="F:Worker_Unity.Views.WorkersViewModel.toggleTaskCompletionCommand">
+            <summary>The backing field for <see cref="P:Worker_Unity.Views.WorkersViewModel.ToggleTaskCompletionCommand"/>.</summary>
+        </member>
+        <member name="P:Worker_Unity.Views.WorkersViewModel.ToggleTaskCompletionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Worker_Unity.Views.WorkersViewModel.ToggleTaskCompletion(Worker_Unity.Views.TaskModel)"/>.</summary>
+        </member>
+        <member name="F:Worker_Unity.Views.WorkersViewModel.saveTaskAsCompletedCommand">
+            <summary>The backing field for <see cref="P:Worker_Unity.Views.WorkersViewModel.SaveTaskAsCompletedCommand"/>.</summary>
+        </member>
+        <member name="P:Worker_Unity.Views.WorkersViewModel.SaveTaskAsCompletedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Worker_Unity.Views.WorkersViewModel.SaveTaskAsCompleted(Worker_Unity.Views.TaskModel)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TaskName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TaskName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TaskDescription">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TaskDescription" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TaskStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TaskStatus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DueDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DueDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanAccept">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanAccept" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanComplete">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanComplete" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NoTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NoTasks" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TaskName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TaskName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TaskDescription">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TaskDescription" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TaskStatus">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TaskStatus" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DueDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DueDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanAccept">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanAccept" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanComplete">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanComplete" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NoTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NoTasks" generated properties.</summary>
+        </member>
+    </members>
+</doc>

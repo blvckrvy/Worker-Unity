@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Worker_Unity.Views.WorkerPage"
+             xmlns:local="clr-namespace:Worker_Unity.Views"
+            x:DataType="local:WorkersViewModel"
+            Title="Worker Unity"
+             x:Name="myPage"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+        Order="Primary"
+        IconImageSource="log_out.png"
+        Priority="0"
+        Clicked="LogOut_btn_clicked" />
+    </ContentPage.ToolbarItems>
+    <Grid Padding="20"
+          RowDefinitions="Auto,*">
+
+        <!-- Welcome Label --><!--
+        <Label x:DataType="local:WorkersViewModel"
+                Text="{Binding UserName, StringFormat='Welcome ! {0}'}"
+                FontSize="24"
+                HorizontalOptions="Center"
+                Margin="0,20,0,20" />-->
+
+        <!-- Task Overview Label -->
+        <Label Grid.Row="0"
+                x:Name="taskOverviewLabel"
+                Text="Have a look at your assigned tasks:"
+                FontSize="18"
+                HorizontalOptions="Start"
+                Margin="20,10,0,40"
+                IsVisible="{Binding HasTasks}" />
+        <!-- Only show when tasks are present -->
+
+        <!-- Task List -->
+
+        <!--HasUnevenRows="True"-->
+
+        <CollectionView EmptyView="No task assigned (～￣▽￣)～"
+                ItemsSource="{Binding Tasks}" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:TaskModel">
+                    
+                    <VerticalStackLayout Padding="10" Spacing="10"
+                                         HorizontalOptions="Center">
+                         <!--Task Name--> 
+                        <Label Text="{Binding TaskName}"
+                                FontAttributes="Bold"
+                                FontSize="20" />
+
+                         <!--Task Description--> 
+                        <Label Text="{Binding TaskDescription}"
+                                FontSize="14" />
+
+                         <!--Task Status--> 
+                        <Label Text="{Binding TaskStatus}"
+                                TextColor="{Binding StatusColor}"
+                                FontSize="14" />
+
+                         <!--Accept/Decline Buttons-->
+                        <HorizontalStackLayout Spacing="10">
+                            <Button 
+                                        Text="Accept"
+                                        IsVisible="{Binding CanAccept}"
+                                        Clicked="AcceptBtn_Clicked"/>
+
+                            <Button     x:Name="DeleteTaskeBtn"
+                                        Clicked="DeleteTask_Clicked"
+                                        Text="Delete Task"
+                                        CommandParameter="{Binding .}"/>
+                        </HorizontalStackLayout>
+
+                         <!--Task Completed Button-->
+                        <Button Text="Task Completed"
+                                IsVisible="{Binding CanComplete}"
+                                Clicked="TaskCompletedBtn_Clicked"
+                                
+                                HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- No Tasks Image and Message -->
+
+    </Grid>
+
+
+</ContentPage>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Worker_Unity.Views.SignUpPage"
+             Title="">
+
+    <VerticalStackLayout Padding="20" VerticalOptions="Center">
+        <Label
+                Text="Sign Up"
+                FontSize="24"
+                HorizontalOptions="Center" />
+
+        <!--first name-->
+        <Entry
+                x:Name="firstNameEntry"
+                Placeholder="First Name"
+                Margin="0,20,0,0" />
+
+        <!--last name-->
+        <Entry
+                x:Name="lastNameEntry"
+                Placeholder="Last Name"
+                Margin="0,10,0,0" />
+
+        <!--username-->
+        <Entry
+                x:Name="usernameEntry"
+                Placeholder="Username"
+                Margin="0,10,0,0" />
+
+        <!--password-->
+        <Entry
+                x:Name="passwordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                Margin="0,10,0,0" />
+
+        <!--confirm password-->
+        <Entry
+                x:Name="confirmpasswordEntry"
+                Placeholder="Confirm Password"
+                IsPassword="True"
+                Margin="0,10,0,0" />
+
+        <!--role selection-->
+        <Picker
+                x:Name="rolePicker"
+                Title="Select Role"
+                Margin="0,20,0,0">
+            <Picker.Items>
+                <x:String>Worker</x:String>
+                <x:String>Admin</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!--sign up button-->
+        <Button
+                Text="Sign Up"
+                Clicked="Signup_btn_clicked"
+                Margin="0,20,0,0" />
+    </VerticalStackLayout>
+
+</ContentPage>
