@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.Views.WorkerLogin"
+             Title="Worker Login">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Label
+                Text="Welcome Back"
+                FontSize="24"
+                HorizontalOptions="Center" />
+            
+            <!--username entry-->
+            <Entry
+                x:Name="usernameEntry"
+                Placeholder="Username"
+                Margin="0,20,0,0" />
+            
+            <!--password entry-->
+            <Entry
+                x:Name="passwordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                Margin="0,20,0,0" />
+            
+            <!--login button-->
+            <Button
+                Text="Login"
+                Clicked="OnLoginClicked"
+                Margin="0,20,0,0"
+                CornerRadius="20"
+                BorderWidth="1"
+                BorderColor="DarkGreen"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.Views.Pages.AdminPage"
+             Title="Worker Unity">
+    
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Order="Primary"
+            IconImageSource="chat.png"
+            Priority="0"
+            Clicked="OnChatClicked"/>
+
+        <ToolbarItem
+            Order="Secondary"
+            Text="Log out"
+            Priority="0"
+            Clicked="OnLogoutClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Margin="0,100,0,0">
+                <Label
+                    Text="Admin Dashboard"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Margin="0,0,0,50"/>
+
+                <Label
+                    Text="Here you can assign tasks, track task status, communicate with your workers, or simply manage your settings."
+                    FontAttributes="Italic"
+                    HorizontalOptions="Center"/>
+                
+                <!--task assignment button-->
+                <Button
+                    Text="Task Assignment"
+                    Margin="0,70,0,0"
+                    Clicked="TaskAssignClicked"
+                    CornerRadius="20"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen" />
+                
+                <!--task tracking button-->
+                <Button
+                    Text="Track Task Status"
+                    Margin="0,20,0,0"
+                    Clicked="TrackTaskClicked"
+                    CornerRadius="20"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

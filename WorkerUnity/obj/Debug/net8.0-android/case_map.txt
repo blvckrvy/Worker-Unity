@@ -1,0 +1,5 @@
+images\chat;images\chat
+images\logout;images\logout
+images\notask;images\notask
+images\settings;images\settings
+raw\aboutassets;raw\AboutAssets

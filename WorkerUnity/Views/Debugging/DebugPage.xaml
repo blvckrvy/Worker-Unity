@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.Views.Debugging.DebugPage"
+             Title="Database">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Margin="0,10,0,0"
+                         VerticalOptions="StartAndExpand">
+                <Button 
+                    Text="View All Data" 
+                    Clicked="OnViewAllDataClicked"
+                    Margin="0,20,0,0"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen"
+                    CornerRadius="20"/>
+
+                <Button
+                    Text="Delete Assigned Tasks"
+                    Clicked="OnDeleteAssignedTasksClicked"
+                    TextColor="OrangeRed"
+                    Margin="0,20,0,0"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen"
+                    CornerRadius="20"/>
+                
+                <Button
+                    Text="Delete Tasks"
+                    Clicked="OnDeleteTasksClicked"
+                    TextColor="OrangeRed"
+                    Margin="0,20,0,0"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen"
+                    CornerRadius="20"/>
+                
+                <Button
+                    Text="Delete Archived Tasks"
+                    Clicked="OnDeleteArchivesClicked"
+                    TextColor="OrangeRed"
+                    Margin="0,20,0,0"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen"
+                    CornerRadius="20"/>
+                
+                <Button
+                    Text="Delete Chats"
+                    Clicked="OnDeleteChatsClicked"
+                    TextColor="OrangeRed"
+                    Margin="0,20,0,0"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen"
+                    CornerRadius="20"/>
+
+                <Button
+                    Text="Delete Messages"
+                    Clicked="OnDeleteMessagesClicked"
+                    TextColor="OrangeRed"
+                    Margin="0,20,0,0"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen"
+                    CornerRadius="20"/>
+
+                <Button
+                    Text="Delete All Data"
+                    Clicked="OnDeleteAllDataClicked"
+                    TextColor="DarkRed"
+                    Margin="0,20,0,0"
+                    BorderWidth="1"
+                    BorderColor="DarkGreen"
+                    CornerRadius="20"/>
+
+                <Label
+                    x:Name="ViewOutput"
+                    Margin="0,20,0,10"/>
+
+                <Label    
+                    x:Name="DebugOutput"
+                    Margin="0,20,0,0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.Views.Messages.ChatList"
+             Title="Messages">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Order="Primary"
+            IconImageSource="newchat.png"
+            Priority="0"
+            Clicked="OnNewChatClicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <!--search bar-->
+            <SearchBar Placeholder="Search" />
+
+            <!--chat list-->
+            <CollectionView Margin="0,20,0,0" ItemsSource="{Binding Chats}"
+                            SelectionMode="Single" SelectionChanged="OnChatSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--profile icon-->
+                            <Image
+                                Grid.Column="0"
+                                Source="profile.png"
+                                HeightRequest="40"
+                                WidthRequest="40"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center" />
+
+                            <!--chat info-->
+                            <StackLayout Grid.Column="1">
+                                <!--sender's name-->
+                                <Label
+                                    Text="{Binding Name}"
+                                    FontAttributes="Bold"
+                                    FontSize="16" />
+
+                                <!--message preview-->
+                                <Label
+                                    Text="{Binding LastMessagePreviews}"
+                                    FontSize="14"
+                                    TextColor="Gray"
+                                    LineBreakMode="TailTruncation" />
+                            </StackLayout>
+
+                            <!--timestamp-->
+                            <StackLayout Grid.Column="2">
+                                <Label
+                                    Text="{Binding LastMessageTimestamp,
+                                        StringFormat='{0:hh:mm tt}'}"
+                                    FontSize="12"
+                                    VerticalOptions="Center" />
+
+                                <Label
+                                    Text="{Binding UnreadCount}"
+                                    FontSize="14"
+                                    IsVisible="{Binding UnreadCount,
+                                        Converter={StaticResource UnreadVisibilityConverter}}"
+                                    FontAttributes="Bold"
+                                    TextColor="White"
+                                    BackgroundColor="Green" 
+                                    HorizontalOptions="End"
+                                    Padding="1.2" />
+                            </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

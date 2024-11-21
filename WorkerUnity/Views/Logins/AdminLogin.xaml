@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.Views.AdminLogin"
+             Title="Admin Login">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Label
+            Text="Welcome Back, Admin"
+            FontSize="24"
+            HorizontalOptions="Center" />
+
+            <!--username entry-->
+            <Entry
+            x:Name="usernameEntry"
+            Placeholder="Admin Username"
+            Margin="0,20,0,0" />
+
+            <!--password entry-->
+            <Entry
+            x:Name="passwordEntry"
+            Placeholder="Admin Password"
+            IsPassword="True"
+            Margin="0,20,0,0" />
+
+            <!--login button-->
+            <Button
+            Text="Login"
+            Clicked="OnAdminClicked"
+            Margin="0,20,0,0"
+            CornerRadius="20"
+            BorderWidth="1"
+            BorderColor="DarkGreen" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

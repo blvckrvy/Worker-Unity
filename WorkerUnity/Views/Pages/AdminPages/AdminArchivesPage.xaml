@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.Views.Pages.AdminPages.AdminArchivesPage"
+             Title="Archived Tasks">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="20">
+            <!--no tasks event-->
+            <StackLayout
+                x:Name="NoTasksLayout" IsVisible="False"
+                VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Margin="0,0,0,50">
+                <Image
+                    Source="notask.png"
+                    WidthRequest="150"
+                    HeightRequest="100" />
+
+                <Label
+                    Text="No task have been archived yet! ~(￣▽￣)~"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    Margin="0,10,0,0" />
+            </StackLayout>
+
+            <!--task list-->
+            <CollectionView x:Name="TaskListView" IsVisible="False"
+                        VerticalOptions="FillAndExpand" ItemsSource="{Binding Archives}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" Padding="10"
+                               Margin="5" CornerRadius="10">
+                            <StackLayout>
+                                <!--task details-->
+                                <Label
+                                    Text="{Binding WorkerNameDisplay}"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    HorizontalOptions="Center" />
+
+                                <Label
+                                    Text="{Binding ArchivedTaskName}"
+                                    FontAttributes="Bold"
+                                    FontSize="16" />
+
+                                <Label
+                                    Text="{Binding ArchivedTaskDescription}"
+                                    FontSize="14"
+                                    TextColor="Gray"
+                                    Margin="0,5,0,5"/>
+
+                                <Label
+                                    Text="{Binding ArchivedTaskDueDate, StringFormat='Due: {0:MM/dd/yyyy}'}"
+                                    FontSize="14"
+                                    TextColor="Gray"
+                                    Margin="0,0,0,5"/>
+
+                                <Label
+                                    Text="{Binding ArchivedTaskCondition}"
+                                    FontSize="14"
+                                    TextColor="Gray"
+                                    Margin="0,0,0,5" />
+
+                                <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="End" Margin="0,0,10,0">
+                                    <Button
+                                        Text="Delete"
+                                        Clicked="OnDeleteClicked"
+                                        CommandParameter="{Binding .}"
+                                        BorderWidth="1"
+                                        BorderColor="DarkGreen" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

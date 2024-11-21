@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.MainPage"
+             Title="">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Margin="0,50,0,0">
+            <Image
+                Source="image.png"
+                WidthRequest="150"/>
+            
+            <Label
+                Text="Worker Unity"
+                FontSize="24"
+                FontAttributes="Bold"
+                Margin="0,0,0,20"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="TOGETHER WE GROW!!! (๑•̀ㅂ•)و✧́"
+                FontSize="15"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Margin="0,0,0,40" />
+
+            <!--login button-->
+            <Button
+                Text="Worker Login"
+                Clicked="Login_btn_Clicked"
+                CornerRadius="20"
+                Margin="0,50,0,0"
+                BorderWidth="1"
+                BorderColor="DarkGreen"/>
+
+            <!--admin button-->
+            <Button
+                Text="Admin Login"
+                Clicked="Admin_btn_Clicked"
+                CornerRadius="20"
+                Margin="0,20,0,0"
+                BorderWidth="1"
+                BorderColor="DarkGreen"/>
+            
+            <!--signup button-->
+            <Button
+                Text="Sign Up"
+                Clicked="SignUp_btn_Clicked"
+                CornerRadius="20"
+                Margin="0,20,0,0"
+                BorderWidth="1"
+                BorderColor="DarkGreen"/>
+
+            <!--database page-->
+            <Button
+                Text="Database (temp)"
+                Clicked="Database_Clicked"
+                CornerRadius="20"
+                Margin="0,20,0,0"
+                BorderWidth="1"
+                BorderColor="DarkGreen"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

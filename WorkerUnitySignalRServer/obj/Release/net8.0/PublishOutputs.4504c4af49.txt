@@ -1,0 +1,12 @@
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\WorkerUnitySignalRServer.exe
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\appsettings.Development.json
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\appsettings.json
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\libman.json
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\WorkerUnitySignalRServer.dll
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\WorkerUnitySignalRServer.deps.json
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\WorkerUnitySignalRServer.runtimeconfig.json
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\WorkerUnitySignalRServer.pdb
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\Microsoft.Extensions.Features.dll
+C:\Users\chimi\source\repos\Worker Unity App\WorkerUnitySignalRServer\output_server\Microsoft.Extensions.Options.dll

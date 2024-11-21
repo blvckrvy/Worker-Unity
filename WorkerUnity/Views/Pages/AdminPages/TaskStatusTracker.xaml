@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkerUnity.Views.Pages.AdminPages.TaskStatusTracker"
+             Title="Task Status Tracker">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="20">
+            <!--no tasks event-->
+            <StackLayout
+                x:Name="NoTasksLayout" IsVisible="False"
+                VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                <Image
+                    Source="notask.png"
+                    WidthRequest="150"
+                    HeightRequest="100" />
+            </StackLayout>
+
+            <CollectionView
+                x:Name="TaskListView" IsVisible="False"
+                VerticalOptions="FillAndExpand" ItemsSource="{Binding Status}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame
+                            BorderColor="LightGray" Padding="10"
+                            Margin="5" CornerRadius="10">
+                            <StackLayout>
+                                <!--task details-->
+                                <Label
+                                    Text="{Binding WorkerNameDisplay}"
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"/>
+
+                                <Label
+                                    Text="{Binding TaskName}"
+                                    FontSize="16"
+                                    FontAttributes="Bold"/>
+
+                                <Label
+                                    Text="{Binding TaskDescription}"
+                                    FontSize="14"
+                                    TextColor="Gray"
+                                    Margin="0,5,0,5"/>
+
+                                <Label
+                                    Text="{Binding TaskDueDate, StringFormat='Due {0:MM/dd/yyyy}'}"
+                                    FontSize="14"
+                                    TextColor="Gray"
+                                    Margin="0,0,0,5"/>
+
+                                <Label
+                                    Text="{Binding TaskProgress}"
+                                    TextColor="{Binding TaskProgressColor}"
+                                    FontSize="16"/>
+
+                                <Label
+                                    Text="{Binding TaskReason}"
+                                    FontSize="13"
+                                    IsVisible="{Binding ShowReason}"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
